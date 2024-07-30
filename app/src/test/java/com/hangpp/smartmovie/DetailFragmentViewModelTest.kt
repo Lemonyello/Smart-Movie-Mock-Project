@@ -1,7 +1,6 @@
 package com.hangpp.smartmovie
 
-import com.hangpp.smartmovie.data.model.ActorDto
-import com.hangpp.smartmovie.data.model.MovieDto
+import com.hangpp.domain.model.*
 import com.hangpp.domain.remote.UseCaseGetCastAndCrew
 import com.hangpp.domain.remote.UseCaseGetDetailMovie
 import com.hangpp.domain.util.Result
@@ -23,9 +22,9 @@ class DetailFragmentViewModelTest {
 
     private val useCaseGetCastAndCrew: UseCaseGetCastAndCrew = mockk(relaxed = true)
 
-    private lateinit var movieDetailStates: MutableList<Result<MovieDto>>
+    private lateinit var movieDetailStates: MutableList<Result<Movie>>
 
-    private lateinit var castStates: MutableList<Result<List<ActorDto>>>
+    private lateinit var castStates: MutableList<Result<List<Actor>>>
 
     @Before
     fun setup() {

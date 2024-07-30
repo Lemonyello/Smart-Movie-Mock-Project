@@ -1,5 +1,6 @@
 package com.hangpp.smartmovie.view.search
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -24,6 +25,7 @@ class SearchViewModel @Inject constructor(
         _searchMovies.postValue(Result.Loading)
         viewModelScope.launch {
             val response = useCaseSearchMovie(queryString)
+            Log.d("hangpp", "searchMovies: $response")
             _searchMovies.postValue(response)
         }
     }

@@ -7,10 +7,10 @@ data class Movie(
     val title: String,
     val voteAverage: Float,
     val overview: String,
-    val posterPath: String,
+    val posterPath: String?,
     val releaseDate: String,
-    val backdropPath: String,
-    val genreIds: List<String>,
+    val backdropPath: String?,
+    val genreIds: List<String>?,
 ) {
     companion object {
         val DIFF = object : DiffUtil.ItemCallback<Movie>() {

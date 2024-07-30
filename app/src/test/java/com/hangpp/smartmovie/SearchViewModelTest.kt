@@ -1,5 +1,6 @@
 package com.hangpp.smartmovie
 
+import com.hangpp.domain.model.Movie
 import com.hangpp.smartmovie.data.model.MovieDto
 import com.hangpp.domain.remote.UseCaseSearchMovie
 import com.hangpp.domain.util.Result
@@ -19,7 +20,7 @@ class SearchViewModelTest {
 
     private val useCaseSearchMovie: UseCaseSearchMovie = mockk(relaxed = true)
 
-    private lateinit var searchMoviesStates: MutableList<Result<List<MovieDto>>>
+    private lateinit var searchMoviesStates: MutableList<Result<List<Movie>>>
 
     @Before
     fun setUp() {
