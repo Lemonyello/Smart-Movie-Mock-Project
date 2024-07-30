@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation"
+    app:startDestination="@id/navigation_home">
+<!--TODO elaborate on navigation-->
+    <action
+        android:id="@+id/move_to_home"
+        app:destination="@id/navigation_home" />
+
+    <action
+        android:id="@+id/move_to_search"
+        app:destination="@id/navigation_search" />
+
+    <action
+        android:id="@+id/move_to_genres"
+        app:destination="@id/navigation_genres" />
+
+    <action
+        android:id="@+id/move_to_detail"
+        app:destination="@id/navigation_detail" />
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.hangpp.smartmovie.view.home.MainFragment"
+        android:label="Home"/>
+
+    <fragment
+        android:id="@+id/navigation_search"
+        android:name="com.hangpp.smartmovie.view.search.FragmentSearch"
+        android:label="Search">
+    </fragment>
+
+    <fragment
+        android:id="@id/navigation_genres"
+        android:name="com.hangpp.smartmovie.view.genres.GenresFragment"
+        android:label="Genres">
+        <action
+            android:id="@+id/move_to_detail_genre"
+            app:destination="@id/navigation_detail_genre" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_detail_genre"
+        android:name="com.hangpp.smartmovie.view.genres.GenreDetailFragment"
+        android:label="DetailGenre"/>
+
+    <fragment
+        android:id="@+id/navigation_detail"
+        android:name="com.hangpp.smartmovie.view.detail.FragmentMovieDetail"
+        android:label="Detail" />
+
+</navigation>

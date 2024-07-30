@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_discover"
+        android:icon="@drawable/apps"
+        android:title="@string/bottom_navigation_discover" />
+
+    <item
+        android:id="@+id/navigation_search"
+        android:icon="@drawable/search"
+        android:title="@string/bottom_navigation_search" />
+
+    <item
+        android:id="@+id/navigation_genres"
+        android:icon="@drawable/theater_masks"
+        android:title="@string/bottom_navigation_genres" />
+
+<!--    <item-->
+<!--        android:id="@+id/navigation_artists"-->
+<!--        android:icon="@drawable/user"-->
+<!--        android:title="@string/bottom_navigation_artists" />-->
+
+</menu>
